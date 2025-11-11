@@ -16,5 +16,9 @@ describe('Chance...', () => {
         expect(new Chance(1).and(new Chance(1)).equals(new Chance(1))).toBe(true);
         expect(new Chance(0).and(new Chance(1)).equals(new Chance(0))).toBe(true);
         expect(new Chance(1).and(new Chance(0)).equals(new Chance(0))).toBe(true);
+        expect(new Chance(0.3).and(new Chance(0.7)).equals(new Chance(0.21))).toBe(true);
+        expect(new Chance(0.7).and(new Chance(0.3)).equals(new Chance(0.21))).toBe(true);
+
+        //expect(new Chance(0.4).and(new Chance(0.4))).toEqual(new Chance(0.16));
     })
 })
