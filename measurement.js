@@ -8,7 +8,7 @@ class Measurement{
 
     equals(other){
         return this._quantityInBaseUnit() === other._quantityInBaseUnit()
-                && this._unit.hasSameBaseUnit(other._unit);
+                && this._unit.isCompatibleWith(other._unit);
     }
 
     _quantityInBaseUnit(){

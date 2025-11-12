@@ -14,7 +14,7 @@ class Unit {
         return quantity * this._ratioToBaseUnit;
     }
 
-    hasSameBaseUnit(other) {
+    isCompatibleWith(other) {
         return this._baseUnit === other._baseUnit;
     }
 }
