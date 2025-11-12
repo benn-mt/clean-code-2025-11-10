@@ -1,5 +1,3 @@
-const {TEASPOON, TABLESPOON} = require("./volumes")
-
 class Measurement{
     constructor(quantity, unit){
         this._quantity = quantity;
