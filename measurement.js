@@ -12,7 +12,7 @@ class Measurement{
         if (this._unit === TABLESPOON) {
              return this._quantity * this._TBSP_TO_TSP_RATIO == other._quantity;
         }
-        if (other._unit == TABLESPOON) {
+        if (other._unit === TABLESPOON) {
             return this._quantity / this._TBSP_TO_TSP_RATIO == other._quantity;
         }
         return this._quantity == other._quantity;
