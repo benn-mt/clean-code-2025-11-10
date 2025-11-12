@@ -10,7 +10,6 @@ class Measurement{
 
     equals(other){
         if (this._unit === TABLESPOON) {
-            console.log("ourUnit: " + this._unit)
              return this._quantity * this._TBSP_TO_TSP_RATIO == other._quantity;
         }
         if (other._unit == TABLESPOON) {
