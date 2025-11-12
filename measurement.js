@@ -7,7 +7,8 @@ class Measurement{
     }
 
     equals(other){
-        return this.quantityInTeaspoons() == other.quantityInTeaspoons();
+        return this.quantityInTeaspoons() == other.quantityInTeaspoons()
+                && this._unit.hasSameBaseUnit(other._unit);
     }
 
     quantityInTeaspoons(){
