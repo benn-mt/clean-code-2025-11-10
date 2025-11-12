@@ -18,4 +18,10 @@ describe('Measurement...', () => {
 
         expect(new Measurement(1, INCH).equals(new Measurement(1, TEASPOON))).toBe(false)
     })
+
+    test('of related units can be added together...', () => {
+        expect(new Measurement(1, TEASPOON).add(new Measurement(1, TEASPOON)).equals(new Measurement(2, TEASPOON))).toBe(true)
+        expect(new Measurement(1, INCH).add(new Measurement(1, INCH)).equals(new Measurement(2, INCH))).toBe(true)
+        expect(new Measurement(3, FOOT).add(new Measurement(3, INCH)).equals(new Measurement(39, INCH))).toBe(true)
+    })
 })

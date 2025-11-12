@@ -14,6 +14,10 @@ class Measurement{
     _quantityInBaseUnit(){
         return this._unit.quantityInBaseUnit(this._quantity);
     }
+
+    add(other){
+        return new Measurement(this._quantityInBaseUnit() + other._quantityInBaseUnit(), this._unit._baseUnit)
+    }
 }
 
 module.exports = {Measurement};
