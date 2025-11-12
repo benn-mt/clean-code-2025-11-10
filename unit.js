@@ -2,16 +2,16 @@ class Unit {
     constructor(ratio, ratioUnit) {
         if (ratioUnit) {
             this._baseUnit = ratioUnit._baseUnit;
-            this._ratioToTeaspoons = ratio * ratioUnit._ratioToTeaspoons;
+            this._ratioToBaseUnit = ratio * ratioUnit._ratioToBaseUnit;
         }
         else {
             this._baseUnit = this;
-            this._ratioToTeaspoons = 1;
+            this._ratioToBaseUnit = 1;
         }
     }
 
-    quantityInTeaspoons(quantity) {
-        return quantity * this._ratioToTeaspoons;
+    quantityInBaseUnit(quantity) {
+        return quantity * this._ratioToBaseUnit;
     }
 
     hasSameBaseUnit(other) {

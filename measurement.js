@@ -7,12 +7,12 @@ class Measurement{
     }
 
     equals(other){
-        return this.quantityInTeaspoons() === other.quantityInTeaspoons()
+        return this._quantityInBaseUnit() === other._quantityInBaseUnit()
                 && this._unit.hasSameBaseUnit(other._unit);
     }
 
-    quantityInTeaspoons(){
-        return this._unit.quantityInTeaspoons(this._quantity);
+    _quantityInBaseUnit(){
+        return this._unit.quantityInBaseUnit(this._quantity);
     }
 }
 
